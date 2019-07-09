@@ -1,0 +1,84 @@
+﻿<Window
+    x:Class="KSHGUI.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:KSHWP"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="KSH"
+    Width="1600"
+    Height="900"
+    Background="{DynamicResource MaterialDesignPaper}"
+    FontFamily="{DynamicResource MaterialDesignFont}"
+    TextElement.FontSize="13"
+    TextElement.FontWeight="Regular"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    TextOptions.TextFormattingMode="Ideal"
+    TextOptions.TextRenderingMode="Auto"
+    mc:Ignorable="d"
+    WindowState="Maximized"
+    ResizeMode="CanResizeWithGrip" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="90*" />
+            <RowDefinition Height="743*" />
+        </Grid.RowDefinitions>
+        <materialDesign:ColorZone Height="44" Mode="PrimaryMid">
+            <StackPanel Margin="2" Orientation="Horizontal">
+                <RadioButton
+                    Margin="4"
+                    Checked="PlanKont_Checked"
+                    Content="PLAN KONT"
+                    Style="{StaticResource MaterialDesignTabRadioButton}" />
+                <RadioButton
+                    Margin="4"
+                    Checked="Dekretacja_Checked"
+                    Content="DEKRETACJA"
+                    Style="{StaticResource MaterialDesignTabRadioButton}" />
+                <RadioButton
+                    Margin="4"
+                    Checked="KG_Checked"
+                    Content="KSIĘGA GŁÓWNA"
+                    Style="{StaticResource MaterialDesignTabRadioButton}" />
+                <RadioButton
+                    Margin="4"
+                    Checked="UsunDekretacje_Checked"
+                    Content="USUŃ DEKRETACJIE"
+                    Style="{StaticResource MaterialDesignTabRadioButton}" />
+                <RadioButton
+                    Margin="4"
+                    Checked="RZiS_Checked"
+                    Content="RZiS"
+                    Style="{StaticResource MaterialDesignTabRadioButton}" />
+                <RadioButton
+                    Margin="4"
+                    Checked="ZOiS_Checked"
+                    Content="ZOiS"
+                    Style="{StaticResource MaterialDesignTabRadioButton}" />
+                <RadioButton
+                    Margin="4"
+                    Checked="Bilans_Checked"
+                    Content="BILANS"
+                    Style="{StaticResource MaterialDesignTabRadioButton}" />
+            </StackPanel>
+        </materialDesign:ColorZone>
+
+        <TextBlock
+            Name="Naglowek"
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            Style="{StaticResource MaterialDesignDisplay1TextBlock}"
+            Text="PLAN KONT" Margin="0,30,0,0" Width="Auto" />
+
+
+        <ContentControl
+            x:Name="ContentArea"
+            Grid.Row="2"
+            x:FieldModifier="public" />
+
+    </Grid>
+</Window>
+
+

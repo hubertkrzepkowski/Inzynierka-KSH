@@ -1,0 +1,1 @@
+Data Source=DESKTOP-CLI37BD\SQLEXPRESS;Initial Catalog=KSH;Integrated Security=True
